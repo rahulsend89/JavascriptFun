@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+name=prompt("What is your name","");
+nu=0;
+num=new Array("H","e","l","l","o"," ",name.toUpperCase()," ","m","y"," ","n","a","m","e"," ","i","s"," ","R","a","h","u","l"," ","M","a","l","i","k","<br>","W","h","a","t"," ","a"," ","s","w","e","e","t"," ","n","a","m","e"," ","u"," ","'","v","e"," ","g","o","t");
+function a(){
+input.innerHTML+=num[nu++];
+var timer=setTimeout("a()",200);
+if(nu==58){
+clearTimeout(timer);
+}
+}
+</script>
+</head>
+<body onLoad="a()">
+<h1 id="input1"></h1>
+<h1 id="input"></h1>
+<form name="f">
+</form>
+</body>
+</html>

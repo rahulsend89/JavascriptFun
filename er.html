@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+function Circle(x,y,r){
+this.x=x;
+this.y=y;
+this.r=r;
+}
+new Circle(0,0,0);
+Circle.prototype.pi=3.14159;
+function Circle_circumference(){
+return 2*this.pi*this.r;
+}
+Circle.prototype.circumference=Circle_circumference;
+Circle.prototype.area=function(){return this.pi*this.r*this.r;}
+var c=new Circle(2,2,5);
+var a=c.area();
+var p=c.circumference();
+document.write(c.area());
+</script>
+</head>
+</html>

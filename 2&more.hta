@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+num=0;
+function a(){
+color =new Array();
+color[0]="red";
+color[1]="yellow";
+color[2]="green";
+color[3]="skyblue";
+if(num>3){
+num=0;
+document.bgColor=(color[num]);
+num++;
+}
+else{
+document.bgColor=(color[num]);
+num++;
+}
+}
+</script>
+</head>
+<body>
+<form name="f">
+<input type="button" value="    Backgroundcolor    " onClick="a()">
+</form>
+</body>
+</html>

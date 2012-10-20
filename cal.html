@@ -1,0 +1,97 @@
+<html>
+<head>
+<HTA:APPLICATION ICON="App.ico">
+<title>
+Basic Calculator
+</title>
+<script>
+function ans(){
+f.input.value=eval(f.input.value) 
+q.innerHTML="Your Answer =";
+}
+function a(){
+re.innerHTML=f.input.value;
+if(f.input1.value==""){
+}
+else{
+re.innerHTML+="&#135;"+f.input1.value;
+}
+setTimeout("a()",200) 
+}
+function power(){
+b=eval(f.input.value);
+d=eval(f.input1.value);
+an=Math.pow(b,d);
+f.input.value=an;
+q.innerHTML="Your Answer =";
+f.input1.value="";
+}
+function sqr(){
+e=eval(f.input.value);
+h=eval(f.input1.value);
+anx=Math.pow(e,eval(1/h));
+f.input.value=anx;
+q.innerHTML="Your Answer =";
+f.input1.value="";
+}
+function cosx(){
+g=eval(f.input.value);
+a_s=eval(eval(Math.cos(g)/180)*100);
+f.input.value=a_s;
+q.innerHTML="Your Answer =";
+}
+function sinx(){
+g=eval(f.input.value);
+a_s=eval(eval(Math.sin(g)/180)*100);
+f.input.value=a_s;
+q.innerHTML="Your Answer =";
+}
+function tanx(){
+g=eval(f.input.value);
+a_s=eval(eval(Math.tan(g)/180)*100);
+f.input.value=a_s;
+q.innerHTML="Your Answer =";
+}
+function ln(){
+g=eval(f.input.value);
+a_s=Math.log(g);
+f.input.value=a_s;
+q.innerHTML="Your Answer =";
+}
+function logx(){
+g=eval(f.input.value);
+a_s=eval(Math.log(g)/Math.log(10));
+f.input.value=a_s;
+q.innerHTML="Your Answer =";
+}
+function expx(){
+g=Math.exp(eval(f.input.value));
+f.input.value=g;
+q.innerHTML="Your Answer =";
+}
+</script>
+</head>
+<body onLoad="a()">
+<h1>Basic Calculator</h1>
+<h1 id="q">Your Question =</h1>
+<h1><a id="re"></a></h1>
+<form name="f">
+<h1>This the Question & answer textbox</h1>
+<input type="text" name="input" size="60">
+
+<input type="button" onClick="ans()" value="         Enter         "><h1>This the root OR power value</h1>
+
+<input type="text" name="input1" size="60">
+<h1>
+<input type="button" onClick="power()" value="         Power         ">
+<input type="button" onClick="sqr()" value="         Sqrt         "><h1>
+<input type="button" onClick="cosx()" value="         Cos         ">
+<input type="button" onClick="sinx()" value="         Sin         ">
+<input type="button" onClick="tanx()" value="         Tan         "><h1>
+<input type="button" onClick="ln()" value="         ln         ">
+<input type="button" onClick="logx()" value="         Log         ">
+<input type="button" onClick="expx()" value="         Expo         ">
+</form>
+
+</body>
+</html>

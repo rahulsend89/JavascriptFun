@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Mr push me</title>
+<script>
+n=0;
+num=5;
+function se(){
+timer= setTimeout("h.innerHTML='This window will close in  '+num--+' Second',document.title=h.innerHTML,d.innerHTML=num",1000);
+timer1=setTimeout("se()",1000);
+if(num==5){
+document.bgColor=("skyblue");
+}
+if(num==4){
+document.bgColor=("green");
+}
+if(num==3){
+document.bgColor=("Orange");
+}
+if(num==2){
+document.bgColor=("yellow");
+}
+if(num==1){
+document.bgColor=("red");
+}
+if(num==-1){
+window.close();
+clearTimeout(timer);
+clearTimeout(timer1);
+}
+}
+function mrpush(){
+words=new Array("Thanks","Once is enough","Some body stop this guy","This is not funny","Are you duffer or a big dumb?","What's going on?","This is the last Warning","Now your window will close!");
+if(n>6){
+n=0;
+f.input.value=words[n];
+n++;
+}
+else{
+f.input.value=words[n];
+n++;
+}
+if(n==7){
+alert("Now this window will colse in 5 sec");
+setTimeout("se()",100);
+}
+}
+</script>
+</head>
+<body>
+<h1 id="h"></h1>
+<div id="d" style="position:absolute;top:8;left:150;color:yellow;font-size:600px;filter:glow() shadow() blur(strength:1500)"></div>
+<form name="f">
+<input type="text" size="60" name="input">
+<input type="button" value="Click Me" name="button" onClick="mrpush()">
+</form>
+</body>
+</html>

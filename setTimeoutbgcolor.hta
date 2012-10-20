@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>BGCOLOR</title>
+<script>
+num=0;
+function a(){
+color =new Array();
+color[0]="red";
+color[1]="yellow";
+color[2]="green";
+color[3]="skyblue";
+if(num>3){
+num=0;
+document.bgColor=(color[num]);
+num++;
+}
+else{
+document.bgColor=(color[num]);
+num++;
+}
+timer=setTimeout("a()",500);
+}
+function b(){
+clearTimeout(timer);
+}
+</script>
+</head>
+<body>
+<form name="f">
+<input type="button" value="    Backgroundcolor    " onClick="a()">
+<input type="button" value="    Backgroundcolorstop    " onClick="b()">
+</form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<HTA:application icon="cn.ico">
+<title>Form</title>
+<script>
+function a(){
+if(f.ch.checked==true){
+f.input1.value="Rahul";
+}
+else{
+f.input1.value="";
+}
+setTimeout("a()",100);
+}
+function b(){
+if(f.ch1.checked==true){
+h.innerHTML=f.input3.value;
+}
+else{
+h.innerHTML="Hello";
+}
+setTimeout("b()",100);
+}
+function e(){
+f.textar2.innerHTML=f.textar.value;
+setTimeout("e()",100);
+}
+function d(){
+document.bgColor=(f.input4.value);
+input.innerHTML=f.input4.value;
+setTimeout("d()",100);
+}
+</script>
+</head>
+<body onload="a(),b(),e(),d()">
+<form name="f">
+<h1 id="h">Hellow</h1>
+<p>If you want to change this heading click this check box</p>
+<p id="i"><input type="text" name="input3"></p>
+<input type="checkbox" name="ch1">
+<p><b>Name :</b>
+<input type="text" name="input1">
+<b>RAHUl</b>
+<input type="checkbox" name="ch"></p>
+<p><b>Gender :</b>
+<input type="radio" name="gender" value="Male" onclick="f.input2.value=(value)">Male
+<input type="radio" name="gender" value="Female" onclick="f.input2.value=(value)">Female
+<input type="text" name="input2"><p>"if you write in Textarea1 it automatically written in Textarea2"<p>Textarea1
+<textarea rows="10" cols="30" name="textar"></textarea>Textarea2
+<textarea rows="10" cols="30" name="textar2"></textarea>
+<h1><b>Enter your Background color</b></h1>
+<h1 id="input"><b></b></h1>
+<input type="text" name="input4">
+</form>
+<h1 id="n"></h1>
+</body>
+</html>

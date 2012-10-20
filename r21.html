@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+var a=new Object();
+a.book=new Object();
+a.book={title:"Books first",pages:195};
+document.write(a.book.pages);
+document.write("<br>");
+document.write(a.book.title);
+var b=Function("a","return ++a");
+document.write("<br>");
+document.write(b(2));
+document.write("<br>");
+document.write(b(2*9));
+var Circle=new Function();
+Circle.prototype.pi=3.14159;
+document.write("<br>");
+document.write(Circle.prototype.pi);
+
+</script>
+</head>
+</html>

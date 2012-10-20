@@ -1,0 +1,28 @@
+<html>
+<body>
+<script language="JavaScript1.2">
+var it=0
+function initialize(){
+mytext=typing.innerText
+var myheight=typing.offsetHeight
+typing.innerText=''
+document.all.typing.style.height=myheight
+document.all.typing.style.visibility="visible"
+typeit()
+}
+function typeit(){
+typing.insertAdjacentText("beforeEnd",mytext.charAt(it))
+if (it<mytext.length-1){
+it++
+setTimeout("typeit()",100)
+}
+else
+return
+}
+if (document.all)
+document.body.onload=initialize
+</script>
+
+<small><span id="typing" style="visibility:hidden" align="left">Welcome to Dynamic Drive, the primer place on the net to get FREE Dynamic HTML scripts to enhance your web site! All scripts on this site take advantage of fourth generation browsers (IE 4.x and/or NS 4.x), with emphasis on practicality and backwards compatibility, to bring true power and interactivity to your site. The majority of scripts here are written by the programmers right here at Dynamic Drive, and cannot be found anywhere else on the net. Enjoy!</span></small>
+<body>
+</html>

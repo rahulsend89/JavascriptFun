@@ -1,0 +1,73 @@
+<html>
+<head>
+<script>
+num=0;
+nu=-50;
+name=prompt("Enter your name :","Dude");
+function a(){
+color =new Array("red","lime");
+msg="Hello "+name.toUpperCase()+"<br>"+" My name is RAHUL MALIK";
+out=msg.substring(0,num);
+input.innerHTML=out;
+num++;
+timer=setTimeout("a()",200);
+if(num>msg.length){
+clearTimeout(timer);
+}
+}
+
+nu_=400;
+nu__=400;
+function d(){
+if(nu_<10&&nu__>600){
+nu_=400;
+nu__=400;
+input.style.top=nu_;
+input.style.left=nu__;
+nu_-=3;
+nu__+=3;
+}
+else{
+input.style.top=nu_;
+input.style.left=nu__;
+nu_-=3;
+nu__+=3;
+}
+timert=setTimeout("d()",1);
+
+if(nu_==400){
+setTimeout("e()",1);
+}
+if(nu_==400){
+clearTimeout(timert);
+}
+}
+
+function b(){
+if(nu>401){
+nu=0;
+input.style.top=nu;
+input.style.left=nu;
+window.status=input.innerHTML;
+nu+=3;
+}
+else{
+input.style.top=nu;
+input.style.left=nu;
+nu+=3;
+}
+timert=setTimeout("b()",1);
+if(nu==400){
+setTimeout("d()",1);
+}
+if(nu==400){
+clearTimeout(timert);
+}
+}
+
+</script>
+</head>
+<body onLoad="a(),b()">
+<u><div id="input"style="position:absolute;top:50;left:50;font-size:60px;color:red;filter:glow(color:Yellow,strength:2) blur()shadow()"></div></u>
+</body>
+</html>

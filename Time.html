@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>
+Time
+</title>
+<script>
+function time(){  
+var now = new Date();
+var year = now.getYear();
+var month = now.getMonth() + 1;
+var date = now.getDate();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds();
+var day = now.getDay();
+input.innerHTML=now;
+input1.innerHTML=year;
+input2.innerHTML=month;
+input3.innerHTML=date;
+input4.innerHTML=hours;
+input5.innerHTML=minutes;
+input6.innerHTML=seconds;
+input7.innerHTML=day;
+setTimeout("time()",100);
+}
+</script>
+</head>
+<body onLoad="time()">
+<div id="input" style="position:absolute;font-size:50px;left:50;color:green;filter:glow(color:yellow,strength:1) blur()shadow()"></div>
+<div id="input1" style="position:absolute;top:100;left:300;font-size:50px;color:skyblue;filter:glow(color:tatti,strength:1) blur()shadow()"></div>
+<div id="input2" style="position:absolute;top:200;left:300;font-size:50px;color:skyblue;filter:glow(color:tatti,strength:1) blur()shadow()"></div>
+<div id="input3" style="position:absolute;top:300;left:300;font-size:50px;color:skyblue;filter:glow(color:tatti,strength:1) blur()shadow()"></div>
+<div id="input4" style="position:absolute;top:400;left:300;font-size:50px;color:skyblue;filter:glow(color:tatti,strength:1) blur()shadow()"></div>
+<div id="input5" style="position:absolute;top:400;left:400;font-size:50px;color:skyblue;filter:glow(color:tatti,strength:1) blur()shadow()"></div>
+<div id="input6" style="position:absolute;top:400;left:500;font-size:50px;color:skyblue;filter:glow(color:tatti,strength:1) blur()shadow()"></div>
+<div id="input7" style="position:absolute;top:400;left:600;font-size:50px;color:skyblue;filter:glow(color:tatti,strength:1) blur()shadow()"></div>
+<div style="position:absolute;top:400;left:370;font-size:50px;color:green;filter:glow(color:blue,strength:1) blur()shadow()">:</div>
+<div style="position:absolute;top:400;left:470;font-size:50px;color:green;filter:glow(color:blue,strength:1) blur()shadow()">:</div>
+<div style="position:absolute;top:100;left:100;font-size:50px;color:red;filter:glow(color:orange,strength:1) blur()shadow()">Year  :</div>
+<div style="position:absolute;top:400;left:100;font-size:50px;color:red;filter:glow(color:orange,strength:1) blur()shadow()">Time  :</div>
+<div style="position:absolute;top:200;left:100;font-size:50px;color:red;filter:glow(color:orange,strength:1) blur()shadow()">Month  :</div>
+
+<div style="position:absolute;top:300;left:100;font-size:50px;color:red;filter:glow(color:orange,strength:1) blur()shadow()">Date  :</div>
+
+<div style="position:absolute;top:500;left:50;font-size:70px;color:red;filter:glow(color:Yellow,strength:2) blur()shadow()"><u>This is Program to Display Current Date,Day,Month,Year,Time </u></div>
+</body>
+</html>

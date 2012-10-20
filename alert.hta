@@ -1,0 +1,31 @@
+<html>
+<head>
+<HTA:application icon="A_Ball_Trans.ico">
+<title>Alert & Auto window close</title>
+<script>
+document.write("<h1>"+"HELLO this window close in 10 second"+"</h1>");
+num=0;
+function a(){
+++num;
+alert("Hello this is a common alert : "+num+"Times");
+}
+</script>
+</head>
+<body onLoad="e()">
+<form name="f">
+<font size="10pt">
+<input type="text" name="t" value="this is common alert" OnSelect="a()">
+<a onMouseOver="a()" id="n">10</font></a>
+</form>
+</body>
+<script>
+num=9;
+function e(){
+setTimeout("n.innerHTML=num--",1000);
+if(num==-1){
+window.close();
+}
+setTimeout("e()",1000);
+}
+</script>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+<script>
+c=0;
+len=prompt("How many subject you have");
+for(i=1;i<=len;i++){
+var si=prompt("Enter your marks of subject "+i);
+c=eval(c)+eval(si);
+}
+pre=eval(c)/eval(len);
+document.write("<h1>This is your total = "+c+"<br>");
+document.write("<h1>This is your percentage = "+pre+"<br>");
+s=confirm("is your percentage and total is correct");
+if(s==1){
+document.write("<br>"+"Thankyou");
+}
+else{
+document.write("<br>"+"I think that you are weak in calculation or your calculator is not working properly");
+}
+</script>
+</head>
+</html>
